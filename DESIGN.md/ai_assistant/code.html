@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary-fixed": "#0f0069", "on-tertiary-fixed": "#131b2e", "error-container": "#ffdad6", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "tertiary": "#545c72", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "tertiary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3323cc", "primary-container": "#6063ee", "on-primary-container": "#fffbff", "secondary": "#4b41e1", "on-tertiary-fixed-variant": "#3f465c", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "primary": "#4648d4", "on-surface": "#191c1e", "secondary-container": "#645efb", "on-secondary": "#ffffff", "tertiary-container": "#6c748b", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#fefcff", "primary-fixed": "#e1e0ff", "outline": "#767586", "surface-variant": "#e0e3e5", "on-surface-variant": "#464554", "inverse-surface": "#2d3133", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#fffbff", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d7", "background": "#f7f9fb", "inverse-primary": "#c0c1ff", "on-error-container": "#93000a", "surface-tint": "#494bd6", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "surface": "#f7f9fb" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { gutter: "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="text-headline-sm text-primary font-headline-sm">EventFlow AI</span></div><div class="px-space-lg mb-space-md"><div class="p-2 bg-surface-container rounded-xl flex items-center justify-between text-body-sm"><span class="text-on-surface-variant">Role</span><span class="font-label-md text-primary">Organizer</span></div></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">school</span>Student Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="volunteer-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">volunteer_activism</span>Volunteer Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="create-event" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">add_circle</span>Create Event</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="qr-attendance" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code_scanner</span>QR Attendance</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="post-event-report" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">description</span>Post-Event Report</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="my-events-qr" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code</span>My Events &amp; QR</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="feedback-analytics" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">analytics</span>Feedback Analytics</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">card_membership</span>Certificates</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="ai-assistant" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">smart_toy</span>AI Assistant</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="reminders-automation" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">schedule</span>Reminders &amp; Automation</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-end px-gutter gap-space-md"><button class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_6px_-1px_rgba(15,23,42,0.05)] overflow-hidden min-h-[700px]">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h2 class="text-headline-md text-on-surface">EventFlow AI Assistant</h2>
+<p class="text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+              Online • Ready to help with campus events
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors" title="Clear Chat">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<div class="flex-1 p-space-lg space-y-space-lg overflow-y-auto max-h-[500px]" id="chat-messages">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex flex-col space-y-1 max-w-[80%]">
+<div class="p-space-md rounded-2xl rounded-tl-none bg-surface-container text-on-surface text-body-md shadow-sm">
+              Hello! I'm your EventFlow AI assistant. How can I help you navigate campus events, check your registrations, or find available seats today?
+            </div>
+<span class="text-body-sm text-outline px-1">10:00 AM</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md justify-end">
+<div class="flex flex-col space-y-1 max-w-[80%] items-end">
+<div class="p-space-md rounded-2xl rounded-tr-none bg-primary text-on-primary text-body-md shadow-sm">
+              What AI events are happening this month?
+            </div>
+<span class="text-body-sm text-outline px-1">10:01 AM</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex flex-col space-y-3 max-w-[85%]">
+<div class="p-space-md rounded-2xl rounded-tl-none bg-surface-container text-on-surface text-body-md shadow-sm space-y-3">
+<p>Here are the AI-focused events scheduled for this month:</p>
+<div class="grid grid-cols-1 gap-2">
+<div class="p-3 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-md text-primary block">Generative AI Hackathon 2025</span>
+<span class="text-body-sm text-on-surface-variant">Oct 18, 2025 • Tech Building 4</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-label-sm bg-primary-fixed text-on-primary-fixed font-label-sm">12 seats left</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-md text-primary block">Ethics in Machine Learning Workshop</span>
+<span class="text-body-sm text-on-surface-variant">Oct 24, 2025 • Hall B</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-label-sm bg-emerald-100 text-emerald-800 font-label-sm">Open</span>
+</div>
+</div>
+</div>
+<span class="text-body-sm text-outline px-1">10:01 AM</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary text-label-md shadow-sm whitespace-nowrap transition-colors flex items-center gap-1.5" onclick="sendSuggestion(this)">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+            What AI events are happening this month?
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary text-label-md shadow-sm whitespace-nowrap transition-colors flex items-center gap-1.5" onclick="sendSuggestion(this)">
+<span class="material-symbols-outlined text-[16px] text-primary">chair</span>
+            Which events have available seats?
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary text-label-md shadow-sm whitespace-nowrap transition-colors flex items-center gap-1.5" onclick="sendSuggestion(this)">
+<span class="material-symbols-outlined text-[16px] text-primary">confirmation_number</span>
+            What events am I registered for?
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary text-label-md shadow-sm whitespace-nowrap transition-colors flex items-center gap-1.5" onclick="sendSuggestion(this)">
+<span class="material-symbols-outlined text-[16px] text-primary">card_membership</span>
+            How can I download my certificate?
+          </button>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest rounded-xl p-2 shadow-sm">
+<input class="flex-1 bg-transparent border-none outline-none px-3 text-body-md text-on-surface placeholder:text-outline" id="chat-input" placeholder="Ask AI about events, seating, schedules..." type="text"/>
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm" onclick="handleSend()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_6px_-1px_rgba(15,23,42,0.05)]">
+<h3 class="text-headline-sm text-on-surface mb-space-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+          Quick Inquiries
+        </h3>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between group" onclick="quickQuery('Check Seat Availability')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">event_seat</span>
+</div>
+<span class="text-body-md text-on-surface group-hover:text-primary transition-colors">Seat Availability</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between group" onclick="quickQuery('My Registrations')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+</div>
+<span class="text-body-md text-on-surface group-hover:text-primary transition-colors">My Registrations</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between group" onclick="quickQuery('Event Certificates')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<span class="text-body-md text-on-surface group-hover:text-primary transition-colors">Certificates</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between group" onclick="quickQuery('Upcoming Schedule')">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+<span class="text-body-md text-on-surface group-hover:text-primary transition-colors">Upcoming Schedule</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary/10 via-surface-container-lowest to-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_6px_-1px_rgba(15,23,42,0.05)]">
+<div class="flex items-center gap-3 mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">lightbulb</span>
+<h4 class="text-headline-sm text-on-surface">AI Tip of the Day</h4>
+</div>
+<p class="text-body-md text-on-surface-variant">
+          You can ask the assistant to automatically set calendar reminders for workshops you've registered for by typing "Remind me 1 hour before my next event".
+        </p>
+</div>
+</div>
+</div>
+<script>
+    function sendSuggestion(btn) {
+      const text = btn.innerText.trim();
+      appendMessage(text, true);
+      setTimeout(() => {
+        appendMessage("I've processed your request regarding '" + text + "'. All systems show updated data for your profile.", false);
+      }, 600);
+    }
+
+    function quickQuery(topic) {
+      appendMessage("Show me info about: " + topic, true);
+      setTimeout(() => {
+        appendMessage("Here is the latest summary for " + topic + ". You have 3 active items requiring attention.", false);
+      }, 600);
+    }
+
+    function handleSend() {
+      const input = document.getElementById('chat-input');
+      const val = input.value.trim();
+      if(!val) return;
+      appendMessage(val, true);
+      input.value = '';
+      setTimeout(() => {
+        appendMessage("I am analyzing your query about \"" + val + "\". Our event database currently lists 14 upcoming campus events matching your criteria.", false);
+      }, 700);
+    }
+
+    function appendMessage(text, isUser) {
+      const container = document.getElementById('chat-messages');
+      const div = document.createElement('div');
+      div.className = "flex items-start gap-space-md " + (isUser ? "justify-end" : "");
+      
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      
+      if(isUser) {
+        div.innerHTML = `
+          <div class="flex flex-col space-y-1 max-w-[80%] items-end">
+            <div class="p-space-md rounded-2xl rounded-tr-none bg-primary text-on-primary text-body-md shadow-sm">
+              ${text}
+            </div>
+            <span class="text-body-sm text-outline px-1">${timeStr}</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center text-on-surface-variant">
+            <span class="material-symbols-outlined text-[16px]">person</span>
+          </div>
+        `;
+      } else {
+        div.innerHTML = `
+          <div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-on-primary">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+          </div>
+          <div class="flex flex-col space-y-1 max-w-[80%]">
+            <div class="p-space-md rounded-2xl rounded-tl-none bg-surface-container text-on-surface text-body-md shadow-sm">
+              ${text}
+            </div>
+            <span class="text-body-sm text-outline px-1">${timeStr}</span>
+          </div>
+        `;
+      }
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    document.getElementById('chat-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        handleSend();
+      }
+    });
+  </script>
+</div></main></div></body></html>

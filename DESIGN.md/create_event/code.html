@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary-fixed": "#0f0069", "on-tertiary-fixed": "#131b2e", "error-container": "#ffdad6", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "tertiary": "#545c72", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "tertiary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3323cc", "primary-container": "#6063ee", "on-primary-container": "#fffbff", "secondary": "#4b41e1", "on-tertiary-fixed-variant": "#3f465c", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "primary": "#4648d4", "on-surface": "#191c1e", "secondary-container": "#645efb", "on-secondary": "#ffffff", "tertiary-container": "#6c748b", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#fefcff", "primary-fixed": "#e1e0ff", "outline": "#767586", "surface-variant": "#e0e3e5", "on-surface-variant": "#464554", "inverse-surface": "#2d3133", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#fffbff", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d7", "background": "#f7f9fb", "inverse-primary": "#c0c1ff", "on-error-container": "#93000a", "surface-tint": "#494bd6", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "surface": "#f7f9fb" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { gutter: "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="text-headline-sm text-primary font-headline-sm">EventFlow AI</span></div><div class="px-space-lg mb-space-md"><div class="p-2 bg-surface-container rounded-xl flex items-center justify-between text-body-sm"><span class="text-on-surface-variant">Role</span><span class="font-label-md text-primary">Organizer</span></div></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">school</span>Student Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="volunteer-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">volunteer_activism</span>Volunteer Dashboard</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="create-event" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">add_circle</span>Create Event</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="qr-attendance" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code_scanner</span>QR Attendance</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="post-event-report" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">description</span>Post-Event Report</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="my-events-qr" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code</span>My Events & QR</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="feedback-analytics" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">analytics</span>Feedback Analytics</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">card_membership</span>Certificates</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-end px-gutter gap-space-md"><button class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full">
+<!-- Top Asymmetric Banner & Header Area -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm uppercase tracking-wider">Create & Configure</span>
+<span class="text-on-surface-variant text-body-sm">// AI-Powered Event Builder</span>
+</div>
+<h1 class="text-headline-xl text-on-surface">Publish a New Campus Experience</h1>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-label-md transition-all shadow-sm" type="button">Save Draft</button>
+<button class="px-space-md py-space-sm rounded-xl bg-primary text-on-primary text-label-md hover:bg-primary-container transition-all shadow-md flex items-center gap-space-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+        Publish Event
+      </button>
+</div>
+</div>
+<!-- Main Grid Layout: Form vs AI Assistant & Live Preview -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Form (8 columns) -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<!-- AI Generator Quick Prompt Bar -->
+<div class="bg-primary-fixed/40 rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div>
+<h3 class="text-headline-sm text-on-surface">Generate with AI Assistant</h3>
+<p class="text-body-sm text-on-surface-variant">Describe your event idea, and EventFlow can draft its description and announcement.</p>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary text-label-sm hover:bg-primary-container transition-all shrink-0 flex items-center gap-space-xs" id="ai-trigger-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+          Magic Fill
+        </button>
+</div>
+<form class="flex flex-col gap-space-lg" id="create-event-form">
+<!-- Event Title -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-title">Event Title *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-title" placeholder="e.g. Annual AI & Hackathon Summit 2025" required="" type="text"/>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-description">Description *</label>
+<textarea class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm resize-none" id="event-description" placeholder="Provide a comprehensive summary of the event activities, speakers, and schedule..." rows="4"></textarea>
+</div>
+<!-- Category & Eligibility Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-category">Category *</label>
+<select class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-category">
+<option value="Technology & AI">Technology & AI</option>
+<option value="Cultural & Arts">Cultural & Arts</option>
+<option value="Sports & Fitness">Sports & Fitness</option>
+<option value="Career & Workshop">Career & Workshop</option>
+<option value="Academic Seminar">Academic Seminar</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-eligibility">Eligibility *</label>
+<select class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-eligibility">
+<option value="All Students">All Students</option>
+<option value="Computer Science Dept">Computer Science Dept</option>
+<option value="Final Year Students">Final Year Students</option>
+<option value="Registered Volunteers">Registered Volunteers</option>
+</select>
+</div>
+</div>
+<!-- Date & Start Time Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-date">Date *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-date" type="date"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-time">Start Time *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-time" type="time"/>
+</div>
+</div>
+<!-- Venue & Registration Deadline Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-venue">Venue *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-venue" placeholder="e.g. Main Auditorium, Block B" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-deadline">Registration Deadline *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-deadline" type="date"/>
+</div>
+</div>
+<!-- Maximum Participants -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-md text-on-surface" for="event-max">Maximum Participants *</label>
+<input class="px-space-md py-3 rounded-xl bg-surface text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" id="event-max" placeholder="e.g. 250" type="number"/>
+</div>
+</form>
+</div>
+<!-- Right Column: Live Preview & AI Assistant Side Card (4 columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Live Preview Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="text-label-md text-on-surface-variant uppercase tracking-wider">// Live Preview</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm">Draft View</span>
+</div>
+<!-- Preview Card UI -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="w-full h-40 bg-cover bg-center" data-alt="A modern university campus tech event with holographic displays, bright student participants, and high-tech indigo and violet mood lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx0eccyBS5IdJPDvN_PtpLXjUtc_TxCeKf8yZkme5Q1irqBGch511kXW4YSWbYCepcVdFe-69pYRn4x0u8BGQ8bjdLzjUXRDvQ-Xg1-UVKu18C-Ql3JKNqLW9Jvp7SNcikS33Elmk_Gq1SzoslB7HhQR6qgigiCz2uEqMDgDx1K1hPrFKS7eGP48-qDajfMaD3c2zwQ8WjX_Viyjy-VleGzfz02wKKDZTM14Vx4khG1DsucQN0bFxOAw')"></div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed text-label-sm" id="preview-category">Technology & AI</span>
+<span class="text-body-sm text-on-surface-variant" id="preview-date">Oct 24, 2025</span>
+</div>
+<h4 class="text-headline-sm text-on-surface line-clamp-1" id="preview-title">Annual AI & Hackathon Summit</h4>
+<p class="text-body-sm text-on-surface-variant line-clamp-2" id="preview-description">Provide a comprehensive summary of the event activities, speakers, and schedule...</p>
+<div class="flex flex-col gap-1 pt-space-xs border-t border-surface-container">
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span id="preview-venue">Main Auditorium, Block B</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span id="preview-max">Max: 250 participants</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-3 rounded-xl bg-secondary text-on-secondary text-label-md hover:bg-secondary-container transition-all text-center" type="button">
+          Test Register Flow
+        </button>
+</div>
+<!-- Compact Organizer Pro-Tip Card -->
+<div class="bg-surface-container-highest rounded-2xl p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<h4 class="text-headline-sm text-on-surface">Pro-Tip for Organizers</h4>
+</div>
+<p class="text-body-sm text-on-surface-variant">
+          Events with eligibility constraints properly set see a 40% reduction in check-in queues because students arrive pre-verified via EventFlow's automated attendance sync.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Live Preview Realtime Script -->
+<script>
+    const titleInput = document.getElementById('event-title');
+    const descInput = document.getElementById('event-description');
+    const catInput = document.getElementById('event-category');
+    const dateInput = document.getElementById('event-date');
+    const venueInput = document.getElementById('event-venue');
+    const maxInput = document.getElementById('event-max');
+
+    const previewTitle = document.getElementById('preview-title');
+    const previewDesc = document.getElementById('preview-description');
+    const previewCategory = document.getElementById('preview-category');
+    const previewDate = document.getElementById('preview-date');
+    const previewVenue = document.getElementById('preview-venue');
+    const previewMax = document.getElementById('preview-max');
+
+    const aiTriggerBtn = document.getElementById('ai-trigger-btn');
+
+    titleInput.addEventListener('input', (e) => {
+      previewTitle.textContent = e.target.value || 'Annual AI & Hackathon Summit';
+    });
+
+    descInput.addEventListener('input', (e) => {
+      previewDesc.textContent = e.target.value || 'Provide a comprehensive summary of the event activities, speakers, and schedule...';
+    });
+
+    catInput.addEventListener('change', (e) => {
+      previewCategory.textContent = e.target.value;
+    });
+
+    dateInput.addEventListener('input', (e) => {
+      previewDate.textContent = e.target.value || 'Oct 24, 2025';
+    });
+
+    venueInput.addEventListener('input', (e) => {
+      previewVenue.textContent = e.target.value || 'Main Auditorium, Block B';
+    });
+
+    maxInput.addEventListener('input', (e) => {
+      previewMax.textContent = 'Max: ' + (e.target.value || '250') + ' participants';
+    });
+
+    aiTriggerBtn.addEventListener('click', () => {
+      titleInput.value = 'GenAI CodeSprint & Neural Hack 2025';
+      descInput.value = 'Join top student innovators for an immersive 12-hour hackathon focused on building generative AI applications using campus cloud infrastructure.';
+      catInput.value = 'Technology & AI';
+      dateInput.value = '2025-11-15';
+      document.getElementById('event-time').value = '09:00';
+      venueInput.value = 'Innovation Hub, Floor 3';
+      document.getElementById('event-deadline').value = '2025-11-12';
+      maxInput.value = '150';
+      document.getElementById('event-eligibility').value = 'Computer Science Dept';
+
+      // Trigger inputs to update preview
+      titleInput.dispatchEvent(new Event('input'));
+      descInput.dispatchEvent(new Event('input'));
+      catInput.dispatchEvent(new Event('change'));
+      dateInput.dispatchEvent(new Event('input'));
+      venueInput.dispatchEvent(new Event('input'));
+      maxInput.dispatchEvent(new Event('input'));
+    });
+  </script>
+</div></main></div></body></html>

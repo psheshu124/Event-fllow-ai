@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary-fixed": "#0f0069", "on-tertiary-fixed": "#131b2e", "error-container": "#ffdad6", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "tertiary": "#545c72", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "tertiary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3323cc", "primary-container": "#6063ee", "on-primary-container": "#fffbff", "secondary": "#4b41e1", "on-tertiary-fixed-variant": "#3f465c", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "primary": "#4648d4", "on-surface": "#191c1e", "secondary-container": "#645efb", "on-secondary": "#ffffff", "tertiary-container": "#6c748b", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#fefcff", "primary-fixed": "#e1e0ff", "outline": "#767586", "surface-variant": "#e0e3e5", "on-surface-variant": "#464554", "inverse-surface": "#2d3133", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#fffbff", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d7", "background": "#f7f9fb", "inverse-primary": "#c0c1ff", "on-error-container": "#93000a", "surface-tint": "#494bd6", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "surface": "#f7f9fb" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { gutter: "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="text-headline-sm text-primary font-headline-sm">EventFlow AI</span></div><div class="px-space-lg mb-space-md"><div class="p-2 bg-surface-container rounded-xl flex items-center justify-between text-body-sm"><span class="text-on-surface-variant">Role</span><span class="font-label-md text-primary">Organizer</span></div></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">school</span>Student Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="volunteer-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">volunteer_activism</span>Volunteer Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="create-event" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">add_circle</span>Create Event</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="qr-attendance" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code_scanner</span>QR Attendance</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="post-event-report" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">description</span>Post-Event Report</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="my-events-qr" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code</span>My Events & QR</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="feedback-analytics" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">analytics</span>Feedback Analytics</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="certificates" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">card_membership</span>Certificates</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-end px-gutter gap-space-md"><button class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-xl gap-space-md">
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary mb-1 block">Digital Credentials</span>
+<h1 class="text-headline-xl text-on-surface">Certificates & Badges</h1>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low p-1.5 rounded-xl self-start">
+<button class="px-space-md py-space-sm rounded-lg text-label-md bg-surface text-on-surface shadow-sm transition-all" id="tab-student" onclick="switchTab('student')">Student View</button>
+<button class="px-space-md py-space-sm rounded-lg text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-organizer" onclick="switchTab('organizer')">Organizer Issuer</button>
+</div>
+</div>
+<div class="space-y-space-xl" id="view-student">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<span class="text-body-sm text-on-surface-variant block mb-1">Total Earned</span>
+<span class="text-headline-lg text-on-surface">12 Certificates</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<span class="text-body-sm text-on-surface-variant block mb-1">Verified on Chain</span>
+<span class="text-headline-lg text-on-surface">100% Secure</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">link</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<span class="text-body-sm text-on-surface-variant block mb-1">Skills Endorsed</span>
+<span class="text-headline-lg text-on-surface">28 Badges</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">military_tech</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-2 rounded-xl flex-1 max-w-md">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none outline-none w-full text-body-md text-on-surface placeholder:text-on-surface-variant" placeholder="Search certificates by event or issuer..." type="text"/>
+</div>
+<div class="flex items-center gap-space-sm">
+<select class="bg-surface-container-low px-space-md py-2 rounded-xl text-label-md text-on-surface border-none outline-none cursor-pointer">
+<option>All Categories</option>
+<option>Hackathons</option>
+<option>Workshops</option>
+<option>Conferences</option>
+</select>
+<select class="bg-surface-container-low px-space-md py-2 rounded-xl text-label-md text-on-surface border-none outline-none cursor-pointer">
+<option>Sort by: Newest</option>
+<option>Sort by: Event Name</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative h-48 bg-surface-container flex items-center justify-center p-space-lg overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-label-sm text-on-surface">Verified</span>
+</div>
+<div class="text-center relative z-10 p-space-md border-2 border-primary/20 rounded-lg w-full h-full flex flex-col justify-between items-center bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary block mb-1">Certificate of Excellence</span>
+<h3 class="text-headline-sm text-on-surface line-clamp-1">Global AI Hackathon 2024</h3>
+</div>
+<span class="text-body-sm text-on-surface-variant font-mono">ID: 0x4f8a...3b21</span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md bg-surface">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-body-sm text-on-surface-variant">Issued to</span>
+<span class="text-label-md text-on-surface font-semibold">Alex Morgan</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-body-sm text-on-surface-variant">Issue Date</span>
+<span class="text-body-md text-on-surface">Oct 24, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-sm" onclick="openModal('Global AI Hackathon 2024', 'Alex Morgan', 'Oct 24, 2024', '0x4f8a9c2b3e1f...3b21')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              View
+            </button>
+<button class="flex-1 bg-surface-container-low text-on-surface py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Download
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative h-48 bg-surface-container flex items-center justify-center p-space-lg overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-label-sm text-on-surface">Verified</span>
+</div>
+<div class="text-center relative z-10 p-space-md border-2 border-primary/20 rounded-lg w-full h-full flex flex-col justify-between items-center bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">school</span>
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary block mb-1">Certificate of Completion</span>
+<h3 class="text-headline-sm text-on-surface line-clamp-1">Advanced Cloud Architecture</h3>
+</div>
+<span class="text-body-sm text-on-surface-variant font-mono">ID: 0x9c2b...1e4f</span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md bg-surface">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-body-sm text-on-surface-variant">Issued to</span>
+<span class="text-label-md text-on-surface font-semibold">Alex Morgan</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-body-sm text-on-surface-variant">Issue Date</span>
+<span class="text-body-md text-on-surface">Sep 15, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-sm" onclick="openModal('Advanced Cloud Architecture', 'Alex Morgan', 'Sep 15, 2024', '0x9c2bf4e1a8...1e4f')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              View
+            </button>
+<button class="flex-1 bg-surface-container-low text-on-surface py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Download
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="relative h-48 bg-surface-container flex items-center justify-center p-space-lg overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-label-sm text-on-surface">Verified</span>
+</div>
+<div class="text-center relative z-10 p-space-md border-2 border-primary/20 rounded-lg w-full h-full flex flex-col justify-between items-center bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">military_tech</span>
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary block mb-1">Certificate of Participation</span>
+<h3 class="text-headline-sm text-on-surface line-clamp-1">UI/UX Design Masterclass</h3>
+</div>
+<span class="text-body-sm text-on-surface-variant font-mono">ID: 0x1e4f...9c2b</span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md bg-surface">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-body-sm text-on-surface-variant">Issued to</span>
+<span class="text-label-md text-on-surface font-semibold">Alex Morgan</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-body-sm text-on-surface-variant">Issue Date</span>
+<span class="text-body-md text-on-surface">Aug 10, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-sm" onclick="openModal('UI/UX Design Masterclass', 'Alex Morgan', 'Aug 10, 2024', '0x1e4f8a9c2b...9c2b')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              View
+            </button>
+<button class="flex-1 bg-surface-container-low text-on-surface py-2.5 rounded-xl text-label-md flex items-center justify-center gap-2 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Download
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-space-xl hidden" id="view-organizer">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-low p-space-xl rounded-xl lg:col-span-1 space-y-space-lg">
+<div>
+<h3 class="text-headline-md text-on-surface mb-1">Batch Issue Credentials</h3>
+<p class="text-body-md text-on-surface-variant">Generate and sign cryptographic certificates for event attendees instantly.</p>
+</div>
+<div class="space-y-space-md">
+<div>
+<label class="block text-label-md text-on-surface mb-1.5">Select Event</label>
+<select class="w-full bg-surface px-space-md py-3 rounded-xl text-body-md text-on-surface border-none outline-none">
+<option>Global AI Hackathon 2024</option>
+<option>Advanced Cloud Architecture Workshop</option>
+<option>UI/UX Design Masterclass</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md text-on-surface mb-1.5">Template Style</label>
+<select class="w-full bg-surface px-space-md py-3 rounded-xl text-body-md text-on-surface border-none outline-none">
+<option>Modern Minimalist (Blockchain Verified)</option>
+<option>Classic Academic Crest</option>
+<option>Tech Hackathon Badge</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md text-on-surface mb-1.5">Recipient List (CSV / Attendance)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-space-lg text-center bg-surface cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-[32px] mb-2">upload_file</span>
+<p class="text-label-md text-on-surface mb-1">Click to upload CSV or drop files here</p>
+<p class="text-body-sm text-on-surface-variant">Supports verified attendee lists from QR check-in</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl text-label-md font-semibold hover:bg-primary/90 transition-all shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+            Issue 142 Certificates
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xl rounded-xl lg:col-span-2 space-y-space-lg">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-md text-on-surface">Recently Issued Batches</h3>
+<span class="text-label-md text-primary cursor-pointer hover:underline">View All History</span>
+</div>
+<div class="space-y-space-md">
+<div class="bg-surface p-space-lg rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h4 class="text-label-md text-on-surface">Global AI Hackathon 2024</h4>
+<p class="text-body-sm text-on-surface-variant">142 recipients • Issued Oct 24, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full text-label-sm">Fully Minted</span>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-surface p-space-lg rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h4 class="text-label-md text-on-surface">Advanced Cloud Architecture</h4>
+<p class="text-body-sm text-on-surface-variant">85 recipients • Issued Sep 15, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full text-label-sm">Fully Minted</span>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-surface p-space-lg rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h4 class="text-label-md text-on-surface">UI/UX Design Masterclass</h4>
+<p class="text-body-sm text-on-surface-variant">60 recipients • Issued Aug 10, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full text-label-sm">Fully Minted</span>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md" id="cert-modal">
+<div class="bg-surface w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-label-md text-on-surface">Blockchain Digital Certificate</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-xl bg-surface-container flex items-center justify-center">
+<div class="bg-surface border-8 border-primary-fixed p-space-xl rounded-xl text-center w-full max-w-xl shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-space-md opacity-10">
+<span class="material-symbols-outlined text-[120px] text-primary">workspace_premium</span>
+</div>
+<span class="text-label-md uppercase tracking-widest text-primary block mb-2">Certificate of Achievement</span>
+<h2 class="text-headline-lg text-on-surface mb-6" id="modal-event-title">Global AI Hackathon 2024</h2>
+<p class="text-body-md text-on-surface-variant mb-2">This is proudly presented to</p>
+<h3 class="text-headline-md text-on-surface mb-6 font-serif italic text-2xl" id="modal-recipient-name">Alex Morgan</h3>
+<p class="text-body-sm text-on-surface-variant max-w-md mx-auto mb-8">For exceptional innovation, dedication, and successful completion of the university event metrics.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4">
+<div class="text-left">
+<span class="text-body-sm text-on-surface-variant block">Issue Date</span>
+<span class="text-label-md text-on-surface" id="modal-date">Oct 24, 2024</span>
+</div>
+<div class="text-right">
+<span class="text-body-sm text-on-surface-variant block">Cryptographic Hash</span>
+<span class="text-body-sm text-primary font-mono" id="modal-hash">0x4f8a...3b21</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-lg py-2.5 rounded-xl text-label-md text-on-surface hover:bg-surface-container transition-all" onclick="closeModal()">Close</button>
+<button class="bg-primary text-on-primary px-space-lg py-2.5 rounded-xl text-label-md flex items-center gap-2 hover:bg-primary/90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Download PDF
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function switchTab(role) {
+      const studentTab = document.getElementById('tab-student');
+      const organizerTab = document.getElementById('tab-organizer');
+      const studentView = document.getElementById('view-student');
+      const organizerView = document.getElementById('view-organizer');
+
+      if (role === 'student') {
+        studentTab.className = 'px-space-md py-space-sm rounded-lg text-label-md bg-surface text-on-surface shadow-sm transition-all';
+        organizerTab.className = 'px-space-md py-space-sm rounded-lg text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+        studentView.classList.remove('hidden');
+        organizerView.classList.add('hidden');
+      } else {
+        organizerTab.className = 'px-space-md py-space-sm rounded-lg text-label-md bg-surface text-on-surface shadow-sm transition-all';
+        studentTab.className = 'px-space-md py-space-sm rounded-lg text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+        organizerView.classList.remove('hidden');
+        studentView.classList.add('hidden');
+      }
+    }
+
+    function openModal(event, name, date, hash) {
+      document.getElementById('modal-event-title').innerText = event;
+      document.getElementById('modal-recipient-name').innerText = name;
+      document.getElementById('modal-date').innerText = date;
+      document.getElementById('modal-hash').innerText = hash;
+      const modal = document.getElementById('cert-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('cert-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+</div></main></div></body></html>

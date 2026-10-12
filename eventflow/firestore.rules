@@ -1,0 +1,125 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function getUserRole() {
+      return getUserData().role;
+    }
+
+    function isVolunteerOrAdmin() {
+      return isAuthenticated() && (getUserRole() == 'volunteer' || getUserRole() == 'admin');
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && getUserRole() == 'admin';
+    }
+
+    // -------------------------------------------------------------
+    // USERS COLLECTION
+    // -------------------------------------------------------------
+    match /users/{userId} {
+      // Authenticated users can read profile documents
+      allow read: if isAuthenticated();
+
+      // CREATION: Users can only create their own profile document,
+      // and CANNOT make themselves a volunteer or admin on signup!
+      allow create: if isOwner(userId)
+                    && request.resource.data.role == 'student'
+                    && request.resource.data.uid == userId;
+
+      // UPDATE:
+      // Ordinary users CANNOT change their own role!
+      // Role field changes require an admin or authorized volunteer.
+      allow update: if (isOwner(userId) && request.resource.data.role == resource.data.role)
+                    || isVolunteerOrAdmin();
+
+      // Deletions are restricted to administrators
+      allow delete: if isAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // EVENTS COLLECTION
+    // -------------------------------------------------------------
+    match /events/{eventId} {
+      // Any authenticated user can view events (students discover & register)
+      allow read: if isAuthenticated();
+
+      // ONLY authorized volunteers or admins can create, edit, or delete events!
+      // Students are strictly denied!
+      allow create: if isVolunteerOrAdmin();
+      allow update: if isVolunteerOrAdmin();
+      allow delete: if isVolunteerOrAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // REGISTRATIONS COLLECTION
+    // -------------------------------------------------------------
+    match /registrations/{regId} {
+      // Students can view their own registrations; Volunteers/Admins can view all for attendance
+      allow read: if isAuthenticated() && (
+        resource.data.studentId == request.auth.uid || isVolunteerOrAdmin()
+      );
+
+      // Students can register themselves; cannot register on behalf of another user
+      allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+
+      // Volunteers can check-in attendees (update attendance status); Students cannot update
+      allow update: if isVolunteerOrAdmin();
+
+      // Registrations cannot be deleted by students
+      allow delete: if isVolunteerOrAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // FEEDBACK COLLECTION
+    // -------------------------------------------------------------
+    match /feedback/{feedbackId} {
+      allow read: if isAuthenticated();
+      // Students can submit their own feedback
+      allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+      allow update, delete: if isVolunteerOrAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // CERTIFICATES COLLECTION
+    // -------------------------------------------------------------
+    match /certificates/{certId} {
+      allow read: if isAuthenticated() && (
+        resource.data.studentId == request.auth.uid || isVolunteerOrAdmin()
+      );
+      // Only volunteers/admins can issue or modify certificates
+      allow create, update, delete: if isVolunteerOrAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // AUTOMATION LOGS & NOTIFICATIONS
+    // -------------------------------------------------------------
+    match /automationLogs/{logId} {
+      allow read, write: if isVolunteerOrAdmin();
+    }
+
+    match /notifications/{notifId} {
+      allow read: if isAuthenticated();
+      allow write: if isVolunteerOrAdmin();
+    }
+
+    // Default deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

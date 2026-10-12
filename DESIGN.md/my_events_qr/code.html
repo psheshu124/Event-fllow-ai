@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary-fixed": "#0f0069", "on-tertiary-fixed": "#131b2e", "error-container": "#ffdad6", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "tertiary": "#545c72", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "tertiary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3323cc", "primary-container": "#6063ee", "on-primary-container": "#fffbff", "secondary": "#4b41e1", "on-tertiary-fixed-variant": "#3f465c", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "primary": "#4648d4", "on-surface": "#191c1e", "secondary-container": "#645efb", "on-secondary": "#ffffff", "tertiary-container": "#6c748b", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#fefcff", "primary-fixed": "#e1e0ff", "outline": "#767586", "surface-variant": "#e0e3e5", "on-surface-variant": "#464554", "inverse-surface": "#2d3133", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#fffbff", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d7", "background": "#f7f9fb", "inverse-primary": "#c0c1ff", "on-error-container": "#93000a", "surface-tint": "#494bd6", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "surface": "#f7f9fb" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { gutter: "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="text-headline-sm text-primary font-headline-sm">EventFlow AI</span></div><div class="px-space-lg mb-space-md"><div class="p-2 bg-surface-container rounded-xl flex items-center justify-between text-body-sm"><span class="text-on-surface-variant">Role</span><span class="font-label-md text-primary">Organizer</span></div></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">school</span>Student Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="volunteer-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">volunteer_activism</span>Volunteer Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="create-event" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">add_circle</span>Create Event</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="qr-attendance" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code_scanner</span>QR Attendance</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="post-event-report" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">description</span>Post-Event Report</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="my-events-qr" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code</span>My Events & QR</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="feedback-analytics" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">analytics</span>Feedback Analytics</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">card_membership</span>Certificates</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-end px-gutter gap-space-md"><button class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full">
+<!-- Top Section / Tabs Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-xl gap-space-md">
+<div>
+<h1 class="font-headline-xl text-on-surface">My Registered Events</h1>
+<p class="font-body-md text-on-surface-variant mt-space-xs">Manage your campus event passes, track attendance status, and access your entry QRs.</p>
+</div>
+<!-- Tab Controls -->
+<div class="flex bg-surface-container p-1 rounded-xl w-fit">
+<button class="px-space-md py-space-sm rounded-lg font-label-md transition-all bg-primary text-on-primary shadow-sm" id="tab-upcoming" onclick="switchTab('upcoming')">
+        Upcoming Events
+      </button>
+<button class="px-space-md py-space-sm rounded-lg font-label-md transition-all text-on-surface-variant hover:text-on-surface" id="tab-completed" onclick="switchTab('completed')">
+        Completed Events
+      </button>
+</div>
+</div>
+<!-- Upcoming Events View -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="view-upcoming">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary-container"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-3 py-1 rounded-full font-label-sm bg-primary-fixed text-on-primary-fixed">Tech & Innovation</span>
+<span class="font-body-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Oct 24, 2:00 PM</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">AI & Future of Work Hackathon</h3>
+<p class="font-body-sm text-on-surface-variant mb-space-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Student Union Hall A</p>
+<div class="flex items-center gap-space-sm mb-space-lg bg-surface-container-low p-3 rounded-lg">
+<div class="flex-1">
+<span class="font-body-sm text-on-surface-variant block">Registration</span>
+<span class="font-label-md text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Confirmed</span>
+</div>
+<div class="w-[1px] h-8 bg-surface-container"></div>
+<div class="flex-1 pl-2">
+<span class="font-body-sm text-on-surface-variant block">Attendance</span>
+<span class="font-label-md text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hourglass_top</span> Pending QR Scan</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-space-sm rounded-lg font-label-md flex items-center justify-center gap-space-sm hover:opacity-95 transition-opacity" onclick="openQRModal('AI & Future of Work Hackathon', '#8839-AI', 'Oct 24, 2023 - 2:00 PM', 'Student Union Hall A')">
+<span class="material-symbols-outlined text-[18px]">qr_code</span> View My QR
+      </button>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-3 py-1 rounded-full font-label-sm bg-secondary-fixed text-on-secondary-fixed">Cultural</span>
+<span class="font-body-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Nov 02, 6:30 PM</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Annual Campus Symphony & Gala</h3>
+<p class="font-body-sm text-on-surface-variant mb-space-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Main Auditorium</p>
+<div class="flex items-center gap-space-sm mb-space-lg bg-surface-container-low p-3 rounded-lg">
+<div class="flex-1">
+<span class="font-body-sm text-on-surface-variant block">Registration</span>
+<span class="font-label-md text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Confirmed</span>
+</div>
+<div class="w-[1px] h-8 bg-surface-container"></div>
+<div class="flex-1 pl-2">
+<span class="font-body-sm text-on-surface-variant block">Attendance</span>
+<span class="font-label-md text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hourglass_top</span> Pending QR Scan</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-space-sm rounded-lg font-label-md flex items-center justify-center gap-space-sm hover:opacity-95 transition-opacity" onclick="openQRModal('Annual Campus Symphony & Gala', '#9412-CS', 'Nov 02, 2023 - 6:30 PM', 'Main Auditorium')">
+<span class="material-symbols-outlined text-[18px]">qr_code</span> View My QR
+      </button>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-tertiary-container"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-3 py-1 rounded-full font-label-sm bg-tertiary-fixed text-on-tertiary-fixed">Leadership</span>
+<span class="font-body-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Nov 10, 10:00 AM</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Global Entrepreneurship Summit</h3>
+<p class="font-body-sm text-on-surface-variant mb-space-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Business School Atrium</p>
+<div class="flex items-center gap-space-sm mb-space-lg bg-surface-container-low p-3 rounded-lg">
+<div class="flex-1">
+<span class="font-body-sm text-on-surface-variant block">Registration</span>
+<span class="font-label-md text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Confirmed</span>
+</div>
+<div class="w-[1px] h-8 bg-surface-container"></div>
+<div class="flex-1 pl-2">
+<span class="font-body-sm text-on-surface-variant block">Attendance</span>
+<span class="font-label-md text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">hourglass_top</span> Pending QR Scan</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-space-sm rounded-lg font-label-md flex items-center justify-center gap-space-sm hover:opacity-95 transition-opacity" onclick="openQRModal('Global Entrepreneurship Summit', '#3301-GE', 'Nov 10, 2023 - 10:00 AM', 'Business School Atrium')">
+<span class="material-symbols-outlined text-[18px]">qr_code</span> View My QR
+      </button>
+</div>
+</div>
+<!-- Completed Events View (Initially Hidden) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="view-completed">
+<!-- Completed Event 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between opacity-85">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-3 py-1 rounded-full font-label-sm bg-surface-container text-on-surface-variant">Workshop</span>
+<span class="font-body-sm text-on-surface-variant">Sep 15, 2023</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Advanced UI/UX Masterclass</h3>
+<p class="font-body-sm text-on-surface-variant mb-space-md">Design Lab 402</p>
+<div class="flex items-center gap-space-sm mb-space-lg bg-surface-container-low p-3 rounded-lg">
+<div class="flex-1">
+<span class="font-body-sm text-on-surface-variant block">Registration</span>
+<span class="font-label-md text-primary">Attended</span>
+</div>
+<div class="w-[1px] h-8 bg-surface-container"></div>
+<div class="flex-1 pl-2">
+<span class="font-body-sm text-on-surface-variant block">Attendance</span>
+<span class="font-label-md text-emerald-600 flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified</span> Verified</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container text-on-surface-variant py-space-sm rounded-lg font-label-md flex items-center justify-center gap-space-sm cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">done_all</span> Event Completed
+      </button>
+</div>
+<!-- Completed Event 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between opacity-85">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-3 py-1 rounded-full font-label-sm bg-surface-container text-on-surface-variant">Seminar</span>
+<span class="font-body-sm text-on-surface-variant">Sep 01, 2023</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-space-xs">Blockchain Security Briefing</h3>
+<p class="font-body-sm text-on-surface-variant mb-space-md">Lecture Hall B</p>
+<div class="flex items-center gap-space-sm mb-space-lg bg-surface-container-low p-3 rounded-lg">
+<div class="flex-1">
+<span class="font-body-sm text-on-surface-variant block">Registration</span>
+<span class="font-label-md text-primary">Attended</span>
+</div>
+<div class="w-[1px] h-8 bg-surface-container"></div>
+<div class="flex-1 pl-2">
+<span class="font-body-sm text-on-surface-variant block">Attendance</span>
+<span class="font-label-md text-emerald-600 flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified</span> Verified</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container text-on-surface-variant py-space-sm rounded-lg font-label-md flex items-center justify-center gap-space-sm cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">done_all</span> Event Completed
+      </button>
+</div>
+</div>
+<!-- QR Modal Backdrop & Container -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-gutter hidden opacity-0 transition-opacity duration-300" id="qr-modal">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl max-w-md w-full p-space-xl flex flex-col items-center text-center transform scale-95 transition-transform duration-300 relative" id="modal-content">
+<!-- Close Button Top Right -->
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeQRModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<!-- Modal Header -->
+<span class="px-3 py-1 rounded-full font-label-sm bg-primary-fixed text-on-primary-fixed mb-space-sm">Event Entry Pass</span>
+<h2 class="font-headline-lg text-on-surface mb-space-xs" id="modal-title">Event Title Here</h2>
+<p class="font-body-sm text-on-surface-variant mb-space-md" id="modal-datetime">Date & Time</p>
+<!-- QR Graphic Placeholder -->
+<div class="bg-surface-container-low p-6 rounded-xl my-space-md flex flex-col items-center justify-center border border-surface-container">
+<div class="w-48 h-48 bg-white p-3 rounded-lg shadow-sm flex items-center justify-center relative overflow-hidden group">
+<!-- Simulated High-Density QR Pattern -->
+<div class="grid grid-cols-6 gap-1 w-full h-full opacity-90">
+<div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div>
+<div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div>
+<div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div>
+<div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div>
+<div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div>
+<div class="bg-on-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div><div class="bg-surface rounded-xs"></div><div class="bg-on-surface rounded-xs"></div>
+</div>
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-center backdrop-blur-[0.5px]">
+<span class="material-symbols-outlined text-[48px] text-primary">qr_code_2</span>
+</div>
+</div>
+<span class="font-headline-sm text-primary mt-space-md tracking-wider" id="modal-reg-id">Registration ID #8839</span>
+</div>
+<!-- Instruction -->
+<p class="font-body-md text-on-surface-variant mb-space-xl px-4">
+        Show this QR to the event volunteer at the venue for instant check-in.
+      </p>
+<!-- Action Button -->
+<button class="w-full bg-surface-container text-on-surface py-space-sm rounded-lg font-label-md hover:bg-surface-container-high transition-colors" onclick="closeQRModal()">
+        Close Pass
+      </button>
+</div>
+</div>
+<!-- Interactive Scripts -->
+<script>
+    function switchTab(tab) {
+      const btnUpcoming = document.getElementById('tab-upcoming');
+      const btnCompleted = document.getElementById('tab-completed');
+      const viewUpcoming = document.getElementById('view-upcoming');
+      const viewCompleted = document.getElementById('view-completed');
+
+      if (tab === 'upcoming') {
+        btnUpcoming.className = "px-space-md py-space-sm rounded-lg font-label-md transition-all bg-primary text-on-primary shadow-sm";
+        btnCompleted.className = "px-space-md py-space-sm rounded-lg font-label-md transition-all text-on-surface-variant hover:text-on-surface";
+        viewUpcoming.classList.remove('hidden');
+        viewCompleted.classList.add('hidden');
+      } else {
+        btnCompleted.className = "px-space-md py-space-sm rounded-lg font-label-md transition-all bg-primary text-on-primary shadow-sm";
+        btnUpcoming.className = "px-space-md py-space-sm rounded-lg font-label-md transition-all text-on-surface-variant hover:text-on-surface";
+        viewCompleted.classList.remove('hidden');
+        viewUpcoming.classList.add('hidden');
+      }
+    }
+
+    function openQRModal(title, regId, datetime, location) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-reg-id').innerText = "Registration ID " + regId;
+      document.getElementById('modal-datetime').innerText = datetime + " • " + location;
+      
+      const modal = document.getElementById('qr-modal');
+      const content = document.getElementById('modal-content');
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeQRModal() {
+      const modal = document.getElementById('qr-modal');
+      const content = document.getElementById('modal-content');
+      
+      modal.classList.add('opacity-0');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Close on backdrop click
+    document.getElementById('qr-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeQRModal();
+      }
+    });
+  </script>
+</div></main></div></body></html>

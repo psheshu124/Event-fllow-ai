@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "on-secondary-fixed": "#0f0069", "on-tertiary-fixed": "#131b2e", "error-container": "#ffdad6", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "tertiary": "#545c72", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "tertiary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3323cc", "primary-container": "#6063ee", "on-primary-container": "#fffbff", "secondary": "#4b41e1", "on-tertiary-fixed-variant": "#3f465c", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "primary": "#4648d4", "on-surface": "#191c1e", "secondary-container": "#645efb", "on-secondary": "#ffffff", "tertiary-container": "#6c748b", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#fefcff", "primary-fixed": "#e1e0ff", "outline": "#767586", "surface-variant": "#e0e3e5", "on-surface-variant": "#464554", "inverse-surface": "#2d3133", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#fffbff", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d7", "background": "#f7f9fb", "inverse-primary": "#c0c1ff", "on-error-container": "#93000a", "surface-tint": "#494bd6", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "surface": "#f7f9fb" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { gutter: "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-md pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="text-headline-sm text-primary font-headline-sm">EventFlow AI</span></div><div class="px-space-lg mb-space-md"><div class="p-2 bg-surface-container rounded-xl flex items-center justify-between text-body-sm"><span class="text-on-surface-variant">Role</span><span class="font-label-md text-primary">Organizer</span></div></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">school</span>Student Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="volunteer-dashboard" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">volunteer_activism</span>Volunteer Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="create-event" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">add_circle</span>Create Event</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="qr-attendance" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code_scanner</span>QR Attendance</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="post-event-report" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">description</span>Post-Event Report</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="my-events-qr" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">qr_code</span>My Events &amp; QR</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="feedback-analytics" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">analytics</span>Feedback Analytics</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">card_membership</span>Certificates</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="ai-assistant" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">smart_toy</span>AI Assistant</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-body-md" data-path="reminders-automation" href="#"><span class="material-symbols-outlined mr-space-md text-[20px]">schedule</span>Reminders &amp; Automation</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-end px-gutter gap-space-md"><button class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-gutter"><div class="flex flex-col w-full pb-16">
+<!-- Top Header Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary font-label-sm">Automation Hub</span>
+<h1 class="text-headline-xl text-on-surface font-headline-xl mt-1">Reminders &amp; Automation</h1>
+<p class="text-body-md text-on-surface-variant mt-1">Manage automated communication workflows, push instant event broadcasts, and monitor real-time delivery logs.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container rounded-xl px-space-md py-space-sm flex items-center gap-space-sm shadow-sm">
+<span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-body-sm font-label-md text-on-surface">Automation Engine: <strong class="text-emerald-600">Active</strong></span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-space-md py-space-sm rounded-xl text-label-md transition-all shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        New Workflow
+      </button>
+</div>
+</div>
+<!-- Event Selector Bar -->
+<div class="bg-surface-container-low rounded-2xl p-space-md mb-space-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div class="flex flex-col w-full md:w-80">
+<label class="text-label-sm text-on-surface-variant mb-1" for="event-select">Target Active Event</label>
+<select class="bg-surface rounded-xl px-space-md py-space-sm text-body-md text-on-surface outline-none focus:ring-2 focus:ring-primary/20 transition-all" id="event-select">
+<option>AI &amp; Future Tech Summit 2025 (Nov 15)</option>
+<option>Campus Hackathon 3.0 (Dec 02)</option>
+<option>Design Systems Workshop (Dec 10)</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-lg w-full md:w-auto justify-end">
+<div class="text-right hidden md:block">
+<div class="text-body-sm text-on-surface-variant">Registered Attendees</div>
+<div class="text-headline-sm text-on-surface">1,420 Active</div>
+</div>
+<div class="text-right hidden md:block">
+<div class="text-body-sm text-on-surface-variant">Scheduled Triggers</div>
+<div class="text-headline-sm text-primary">4 Active</div>
+</div>
+</div>
+</div>
+<!-- Three Main Action Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Card 1: Send Event Announcement -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<h2 class="text-headline-md text-on-surface mb-2">Send Announcement</h2>
+<p class="text-body-sm text-on-surface-variant mb-space-lg">Instantly broadcast custom updates, venue changes, or urgent notices via WhatsApp &amp; Email to all registered participants.</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-on-primary py-space-sm rounded-xl text-label-md transition-all flex items-center justify-center gap-2" onclick="openModal('announcement')">
+<span class="material-symbols-outlined text-[18px]">send</span>
+        Compose &amp; Send
+      </button>
+</div>
+<!-- Card 2: Simulate 24-Hour Reminder -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<h2 class="text-headline-md text-on-surface mb-2">Simulate 24-Hr Reminder</h2>
+<p class="text-body-sm text-on-surface-variant mb-space-lg">Test the automated day-before notification sequence containing schedules, venue maps, and pre-event instructions.</p>
+</div>
+<button class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary py-space-sm rounded-xl text-label-md transition-all flex items-center justify-center gap-2" onclick="openModal('reminder24')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+        Trigger 24-Hr Simulation
+      </button>
+</div>
+<!-- Card 3: Simulate 1-Hour Reminder -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">alarm</span>
+</div>
+<h2 class="text-headline-md text-on-surface mb-2">Simulate 1-Hr Reminder</h2>
+<p class="text-body-sm text-on-surface-variant mb-space-lg">Trigger final check-in prompts, unique QR passes, and immediate session room links right before the doors open.</p>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface py-space-sm rounded-xl text-label-md transition-all flex items-center justify-center gap-2" onclick="openModal('reminder1')">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+        Trigger 1-Hr Simulation
+      </button>
+</div>
+</div>
+<!-- Message Preview Card with WhatsApp & Email badges -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">visibility</span>
+<h2 class="text-headline-md text-on-surface">Live Message Template Preview</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-space-sm py-1 bg-emerald-100 text-emerald-800 rounded-full text-label-sm flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp
+        </span>
+<span class="px-space-sm py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-sm flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[14px]">mail</span> Email
+        </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- WhatsApp Preview -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-xl">Channel: WhatsApp</div>
+<div>
+<div class="text-body-sm text-on-surface-variant mb-2">Sender: EventFlow AI Bot</div>
+<div class="bg-surface-container p-space-md rounded-xl text-body-md text-on-surface font-mono space-y-2">
+<p>👋 Hi <strong>[Attendee Name]</strong>,</p>
+<p>This is your quick reminder for <strong>AI &amp; Future Tech Summit 2025</strong> starting in exactly 24 hours!</p>
+<p>📍 Location: Main Auditorium, Block B<br/>⏰ Time: Nov 15, 09:00 AM</p>
+<p>Show your entry QR code at the gates. See you there!</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Variables: 4 injected</span>
+<span class="text-emerald-600 font-label-sm">Estimated Deliverability: 99.4%</span>
+</div>
+</div>
+<!-- Email Preview -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 right-0 bg-primary text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-xl">Channel: Email HTML</div>
+<div>
+<div class="text-body-sm text-on-surface-variant mb-2">Subject: Final Details: AI &amp; Future Tech Summit 2025</div>
+<div class="bg-surface-container p-space-md rounded-xl text-body-md text-on-surface space-y-2">
+<p class="font-headline-sm">Hello [Attendee Name],</p>
+<p class="text-body-sm text-on-surface-variant">We are thrilled to welcome you to tomorrow's landmark gathering. Please review your personalized agenda and digital access card attached below.</p>
+<div class="p-2 bg-surface rounded text-body-sm font-semibold text-primary text-center">Download Access Pass (PDF)</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Responsive Template</span>
+<span class="text-primary font-label-sm">Open Rate Avg: 68%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Activity Timeline -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">timeline</span>
+<h2 class="text-headline-md text-on-surface">Real-Time Activity &amp; Automation Timeline</h2>
+</div>
+<span class="text-body-sm text-on-surface-variant">Live event logging</span>
+</div>
+<div class="relative pl-6 space-y-space-lg before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-highest">
+<!-- Timeline Item 1 -->
+<div class="relative flex items-start gap-space-md">
+<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-surface-container-low flex items-center justify-center"></span>
+<div class="bg-surface rounded-xl p-space-md w-full shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-label-sm">Registration Confirmed</span>
+<span class="text-body-sm text-on-surface-variant">10:42 AM</span>
+</div>
+<p class="text-body-md text-on-surface mt-1">Batch confirmation email &amp; WhatsApp pass dispatched to <strong>45 new students</strong>.</p>
+</div>
+<span class="text-body-sm font-label-sm text-emerald-600">Success (100%)</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative flex items-start gap-space-md">
+<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-surface-container-low flex items-center justify-center"></span>
+<div class="bg-surface rounded-xl p-space-md w-full shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed rounded text-label-sm">Reminder Scheduled</span>
+<span class="text-body-sm text-on-surface-variant">09:15 AM</span>
+</div>
+<p class="text-body-md text-on-surface mt-1">Automated 24-Hour Reminder queued for queue delivery to 1,420 recipients.</p>
+</div>
+<span class="text-body-sm font-label-sm text-primary">Queued</span>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative flex items-start gap-space-md">
+<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-surface-container-low flex items-center justify-center"></span>
+<div class="bg-surface rounded-xl p-space-md w-full shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-label-sm">Attendance Update</span>
+<span class="text-body-sm text-on-surface-variant">Yesterday</span>
+</div>
+<p class="text-body-md text-on-surface mt-1">QR check-in checkpoint synced at Hall A entrance. 310 scans recorded.</p>
+</div>
+<span class="text-body-sm font-label-sm text-amber-600">Synced</span>
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative flex items-start gap-space-md">
+<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-tertiary ring-4 ring-surface-container-low flex items-center justify-center"></span>
+<div class="bg-surface rounded-xl p-space-md w-full shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded text-label-sm">Event Completion</span>
+<span class="text-body-sm text-on-surface-variant">3 days ago</span>
+</div>
+<p class="text-body-md text-on-surface mt-1">Post-event feedback forms dispatched automatically upon session wrap-up.</p>
+</div>
+<span class="text-body-sm font-label-sm text-tertiary">Archived</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-200" id="action-modal">
+<div class="bg-surface rounded-2xl p-space-lg max-w-md w-full shadow-xl transform scale-95 transition-transform duration-200" id="modal-content">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]" id="modal-icon">campaign</span>
+</div>
+<h3 class="text-headline-lg text-on-surface mb-2" id="modal-title">Confirm Action</h3>
+<p class="text-body-md text-on-surface-variant mb-space-lg" id="modal-desc">Are you sure you want to execute this workflow trigger for all active attendees?</p>
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-lg text-body-sm space-y-1">
+<div class="flex justify-between"><span class="text-on-surface-variant">Selected Event:</span> <span class="font-label-md text-on-surface">AI &amp; Future Tech Summit</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Target Audience:</span> <span class="font-label-md text-on-surface">1,420 Confirmed</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Delivery Channels:</span> <span class="font-label-md text-emerald-600">WhatsApp &amp; Email</span></div>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-sm rounded-xl text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="closeModal()">Cancel</button>
+<button class="px-space-md py-space-sm rounded-xl text-label-md bg-primary hover:bg-primary/90 text-on-primary transition-all flex items-center gap-2" onclick="executeAction()">
+<span class="material-symbols-outlined text-[18px]">check</span>
+          Confirm &amp; Dispatch
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm transform translate-y-20 opacity-0 transition-all duration-300 z-50" id="toast">
+<span class="material-symbols-outlined text-emerald-400">check_circle</span>
+<span class="text-body-md" id="toast-text">Workflow executed successfully!</span>
+</div>
+<script>
+    function openModal(type) {
+      const modal = document.getElementById('action-modal');
+      const content = document.getElementById('modal-content');
+      const title = document.getElementById('modal-title');
+      const desc = document.getElementById('modal-desc');
+      const icon = document.getElementById('modal-icon');
+
+      if (type === 'announcement') {
+        title.textContent = 'Send Event Announcement';
+        desc.textContent = 'This will immediately dispatch a custom broadcast to all registered participants via connected channels.';
+        icon.textContent = 'campaign';
+      } else if (type === 'reminder24') {
+        title.textContent = 'Simulate 24-Hour Reminder';
+        desc.textContent = 'Trigger the automated 24-hour sequence containing schedules, location pins, and check-in guidance.';
+        icon.textContent = 'schedule';
+      } else if (type === 'reminder1') {
+        title.textContent = 'Simulate 1-Hour Reminder';
+        desc.textContent = 'Trigger urgent pre-event check-in notifications and live session access keys right now.';
+        icon.textContent = 'alarm';
+      }
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      content.classList.remove('scale-95');
+      content.classList.add('scale-100');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('action-modal');
+      const content = document.getElementById('modal-content');
+
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+    }
+
+    function executeAction() {
+      closeModal();
+      const toast = document.getElementById('toast');
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    }
+  </script>
+</div></main></div></body></html>
